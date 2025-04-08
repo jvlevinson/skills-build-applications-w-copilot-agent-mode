@@ -5,7 +5,7 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 from .models import User, Team, Activity, Leaderboard, Workout
 
 # Import the REST API endpoint suffix from settings
-from settings import REST_API_ENDPOINT_SUFFIX
+# from settings import REST_API_ENDPOINT_SUFFIX
 
 # Use the endpoint suffix in your views
 # For example:
