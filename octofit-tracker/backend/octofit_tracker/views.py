@@ -9,7 +9,7 @@ def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
 
-    base_url = 'https://urban-adventure-6r9r7rv7pj5cx597:8000.app.github.dev/'
+    base_url = 'https://redesigned-spoon-6r9r7rv754j2rw94:8000.app.github.dev/'
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
