@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/activities`)
+    fetch(`https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/activities`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));
