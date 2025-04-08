@@ -9,7 +9,7 @@ REST_API_ENDPOINT_SUFFIX = '/api/v1'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://redesigned-spoon-6r9r7rv754j2rw94:8000.app.github.dev']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'urban-adventure-6r9r7rv7pj5cx597:8000.app.github.dev']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
