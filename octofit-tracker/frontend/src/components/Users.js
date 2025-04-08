@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
-
 function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}/api/users/`)
+    fetch(`http://localhost:8000/api/users/`)
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));

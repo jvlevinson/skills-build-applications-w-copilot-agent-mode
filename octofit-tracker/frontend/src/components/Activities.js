@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
-
 function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}/api/activities`)
+    fetch(`http://localhost:8000/api/activities`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
-
 function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch(`${baseUrl}/api/teams/`)
+    fetch(`http://localhost:8000/api/teams/`)
       .then(response => response.json())
       .then(data => setTeams(data))
       .catch(error => console.error('Error fetching teams:', error));
