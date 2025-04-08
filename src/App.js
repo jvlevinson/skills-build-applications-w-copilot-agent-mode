@@ -6,6 +6,8 @@ import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import octoLogo from '../docs/octofitapp-small.png';
+import './App.css';
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">OctoFit</a>
+            <NavLink className="navbar-brand" to="/">
+              <img src={octoLogo} alt="OctoFit Logo" className="app-logo" />
+              OctoFit
+            </NavLink>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -38,8 +43,9 @@ function App() {
             </div>
           </div>
         </nav>
-        <div className="container mt-4">
+        <div className="container mt-4 page-content">
           <Routes>
+            <Route path="/" element={<h1>Welcome to OctoFit Tracker</h1>} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/teams" element={<Teams />} />
