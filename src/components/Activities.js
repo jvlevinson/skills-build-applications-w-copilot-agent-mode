@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/activities/?format=json')
+    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/activities/')
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));
@@ -12,9 +12,9 @@ function Activities() {
 
   return (
     <div>
-      <h1 className="mb-4">Activities</h1>
-      <table className="table table-striped">
-        <thead>
+      <h1 className="mb-4 text-primary">Activities</h1>
+      <table className="table table-striped table-hover">
+        <thead className="table-dark">
           <tr>
             <th>ID</th>
             <th>Name</th>

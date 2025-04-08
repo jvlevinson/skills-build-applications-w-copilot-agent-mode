@@ -4,7 +4,7 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/leaderboard/?format=json')
+    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/leaderboard/')
       .then(response => response.json())
       .then(data => setLeaderboard(data))
       .catch(error => console.error('Error fetching leaderboard:', error));
@@ -12,9 +12,9 @@ function Leaderboard() {
 
   return (
     <div>
-      <h1 className="mb-4">Leaderboard</h1>
-      <table className="table table-striped">
-        <thead>
+      <h1 className="mb-4 text-success">Leaderboard</h1>
+      <table className="table table-striped table-hover">
+        <thead className="table-dark">
           <tr>
             <th>ID</th>
             <th>Name</th>
