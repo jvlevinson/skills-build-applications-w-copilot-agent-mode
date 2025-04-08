@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
+
 function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/leaderboard/')
+    fetch(`${baseUrl}/api/leaderboard/`)
       .then(response => response.json())
       .then(data => setLeaderboard(data))
       .catch(error => console.error('Error fetching leaderboard:', error));

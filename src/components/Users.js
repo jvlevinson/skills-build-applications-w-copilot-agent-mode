@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
+
 function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/users/')
+    fetch(`${baseUrl}/api/users/`)
       .then(response => response.json())
       .then(data => setUsers(data))
       .catch(error => console.error('Error fetching users:', error));

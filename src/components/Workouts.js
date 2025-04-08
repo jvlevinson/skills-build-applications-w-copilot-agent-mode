@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const baseUrl = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000';
+
 function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://urban-adventure-6r9r7rv7pj5cx597-8000.app.github.dev/api/workouts/')
+    fetch(`${baseUrl}/api/workouts/`)
       .then(response => response.json())
       .then(data => setWorkouts(data))
       .catch(error => console.error('Error fetching workouts:', error));
